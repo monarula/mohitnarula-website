@@ -926,6 +926,32 @@ a, button {
     font-weight: 600;
 }
 
+/* Inline links inside bio paragraphs — accent color, subtle underline */
+.bio-lead a,
+.bio-text a {
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.35);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.bio-lead a:hover,
+.bio-text a:hover {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent-hover);
+}
+
+/* Make the whole fact card clickable */
+a.bio-fact {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.bio-fact:hover h3 {
+    color: var(--accent-primary);
+}
+
 .bio-facts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
